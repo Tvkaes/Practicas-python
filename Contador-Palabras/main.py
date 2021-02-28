@@ -1,0 +1,5 @@
+print('CONTADOR DE PALABRAS \n')
+texto = input("Ingresa el texto \n")
+print("El texto es: "+ texto)
+contador= len(texto.split())
+print ("el numero de palabras en el texto anterior son: "+ str(contador))
