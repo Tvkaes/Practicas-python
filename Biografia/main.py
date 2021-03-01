@@ -1,8 +1,14 @@
+import re
+
 print("INFORMACION PERSONAL")
-print("Como se llama? \n")
-nom = input()
-if not type(nom) is str:
-    raise TypeError("Solo se Permite letras, intentelo otra vez ")
+
+while 1:
+    print("Como se llama?")
+    nom = input()
+    res = re.findall(r'[0-9]+', nom)
+    res = ','.join(map(str, res))
+    print("\n") if not res else print('Se encontraron los siguientes números: ' + res + '.')
+    break
 
 print("Cual es su fecha de nacimiento?")
 date = input()
